@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <div style="width: 100px;height: 100px;background-color: rgb(246, 255, 127);" id="res">
+
+        </div>
+        <button onclick="ram()">ok</button>
+    </div>
+
+    <div>
+        <div style="width: 100px;height: 100px;background-color: rgb(255, 127, 210);" id="raj"onmouseenter="rr()">
+
+        </div>
+        <button onclick="rr()">ok</button>
+    </div>
+
+</body>
+<script>
+    let res = document.getElementById("res");
+    let raj = document.getElementById("raj");
+    function ram() {
+        res.style = "width: 100px;height: 100px;background-color:red;";
+    }
+   
+    function rr() {
+        raj.style = "width: 100px;height: 100px;background-color:orange;";
+    }
+</script>
+
+</html>

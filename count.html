@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="count.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="overlay">
+            <center>
+                <h2 style="font-size: 10vh;" class="a">happy new year</h2>
+            </center>
+            <br><br><br>
+            <center>
+                <h3 id="end-date">29 desmbar 2023 11:55 pm</h3>
+            </center>
+            <br><br>
+            <div class="col">
+                <div class="div">
+                    <input class="input" type="text" readonly value="0">
+                    <br>
+                    <label for="">days</label>
+                </div>
+                <div class="div">
+                    <input class="input" type="text" readonly value="0">
+                    <br>
+                    <label for="">hours</label>
+                </div>
+                <div class="div">
+                    <input class="input" type="text" readonly value="0">
+                    <br>
+                    <label for="">minutis</label>
+                </div>
+                <div class="div">
+                    <input class="input" type="text" readonly value="0">
+                    <br>
+                    <label for="">soconds</label>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+<script>
+    const endDate = "15 january 2024 1:00 am";
+    document.getElementById("end-date").innerText = endDate;
+    const inputs = document.querySelectorAll("input")
+
+
+    function clock() {
+        const end = new Date(endDate)
+        const now = new Date()
+        const diff = (end - now) / 1000;
+
+        if(diff<0)return;
+       
+        inputs[0].value = Math.floor(diff / 3600 / 24);
+        inputs[1].value = Math.floor(diff / 3600) % 24;
+        inputs[2].value = Math.floor(diff / 60) % 60;
+        inputs[3].value = Math.floor(diff) % 60;
+
+
+    }
+    clock()
+
+    setInterval(
+        () => {
+            clock()
+        },
+    1000
+    )
+
+
+
+</script>
+
+</html>

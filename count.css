@@ -1,0 +1,122 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+.main {
+    width: 100%;
+    height: 100vh;
+    /* background-image: url("as.jpeg"); */
+    /* background-repeat: no-repeat;
+    background-size: cover; */
+
+
+}
+
+body {
+
+    animation: avinash 1s infinite;
+}
+
+@keyframes avinash {
+    0% {
+        background-color: blue;
+    }
+
+    10% {
+        background-color: rgb(194, 157, 65);
+    }
+    20% {
+        background-color: rgb(230, 0, 255);
+    }
+   30% {
+        background-color: rgb(166, 255, 0);
+    }
+    35% {
+        background-color: rgb(255, 0, 217);
+    }
+
+    45% {
+        background-color: rgb(183, 0, 255);
+    }
+
+    55% {
+        background-color: rgb(255, 145, 0);
+    }
+
+    75% {
+        background-color: rgb(145, 147, 32);
+    }
+
+    85% {
+        background-color: rgb(187, 71, 71);
+    }
+
+}
+
+/* .overlay{
+    width: 100%;
+    height: 100%;
+    
+    color: white;
+    background-color: rgb(0,0,0,0.7);
+} */
+/* .h2{
+    color: white;
+    font-size: 10vh;
+} */
+.col {
+    margin-top: 10px;
+    width: 800px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+
+}
+
+.col div {
+    width: 250px;
+
+}
+
+.input {
+    width: 50%;
+    background-color: rgb(240, 240, 240, 0.7);
+    border-radius: 10px;
+    height: 50px;
+    text-align: center;
+    font-size: 20px;
+    animation: sharma 1s infinite;
+
+}
+
+@keyframes sharma {
+    0% {
+        background-color: rgb(255, 136, 0);
+    }
+
+    35% {
+        background-color: rgb(173, 24, 128);
+    }
+
+    45% {
+        background-color: rgb(255, 145, 0);
+    }
+
+    55% {
+        background-color: rgb(119, 82, 135);
+    }
+
+    75% {
+        background-color: rgb(145, 147, 32);
+    }
+
+    85% {
+        background-color: rgb(187, 71, 71);
+    }
+
+}

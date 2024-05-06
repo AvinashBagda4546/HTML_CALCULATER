@@ -1,0 +1,170 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Your head content remains unchanged -->
+</head>
+
+<body>
+    <center>
+        <input type="text" id="to">
+        <button onclick="add()">add</button>
+    </center>
+
+    <center>
+        <input type="text" id="txt">
+        <button onclick="edit()">edit</button>
+    </center>
+
+    <center>
+        <table>
+            <thead>
+                <tr>
+                    <th>name</th>
+                    <th>edit</th>
+                    <th>delete</th>
+                </tr>
+            </thead>
+            <tbody id="tb">
+
+            </tbody>
+        </table>
+    </center>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <script>
+        let to = document.getElementById("to");
+        let tb = document.getElementById("tb");
+        let ed = document.getElementById("txt")
+        let arr = [];
+
+        function add() {
+            arr.push(to.value);
+            displayTable();
+            to.value = "";
+        }
+
+        function ram(i) {
+            arr.splice(i, 1);
+            displayTable();
+        }
+
+        function edit(i) {
+            let editedValue = prompt("Edit the name:", arr[i]);
+            if (editedValue !== null) {
+                arr[i] = editedValue;
+                displayTable();
+            }
+        }
+
+        function displayTable() {
+            tb.innerHTML = "";
+            for (let i = 0; i < arr.length; i++) {
+                tb.innerHTML += `<tr>
+                    <td>${arr[i]}</td>
+                    <td><button onclick="edit(${i})">edit</button></td>
+                    <td><button onclick="ram(${i})">delete</button></td>
+                </tr>`;
+            }
+        }
+    </script>
+</body>
+
+</html>
+
+
+
+
+<!-- <!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+
+<body>
+    <center> <input type="text" id="to">
+        <button onclick="add()">add</button>
+    </center>
+
+<center>
+    <input type="text" id="txt">
+    <button onclick="edit()">edit</button>
+</center>
+    <center>
+        <table>
+            <thead>
+                <tr>
+                    <th>name</th>
+                    <th>edit</th>
+                    <th>delete</th>
+                </tr>
+            <tbody id="tb">
+
+            </tbody>
+
+            </thead>
+        </table>
+    </center>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+
+<script>
+    let to = document.getElementById("to");
+    let tb = document.getElementById("tb");
+    let ed = document.getElementById("txt")
+    let arr = [];
+    function add() {
+        arr.push(to.value)
+        console.log(arr);
+        tb.innerHTML = ""
+        to.value = ""
+        for (let i = 0; i < arr.length; i++) {
+            tb.innerHTML += ` <tr>
+                <td>${arr[i]}</td>
+                <td> <button>edit</button></td>
+                <td><button onclick="ram(${i})" >delete</button></td>
+            </tr>`
+            console.log(arr);
+        }
+    }
+
+    function ram(i) {
+        arr.splice(i, 1)
+        tb.innerHTML = ""
+        for (let i = 0; i < arr.length; i++) {
+            tb.innerHTML += ` <tr>
+                <td>${arr[i]}</td>
+                <td> <button>edit</button></td>
+                <td><button onclick="ram(${i})" >delete</button></td>
+            </tr>`
+            console.log(arr);
+        }
+        console.log(arr);
+
+    }
+
+    function edit(){
+        
+    }
+
+  
+
+
+
+
+</script>
+
+</html> -->
+
+
